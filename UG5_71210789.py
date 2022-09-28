@@ -3,11 +3,13 @@ class Karyawan:
     _umur = ''
     _jenisKelamin = None
     _upahPerHari = None
-    
+
+#Constructor
     def __init__(self, nama, umur):
         self._nama = nama
         self._umur = umur
 
+#Getter
     def getNama (self):
         return self._nama
 
@@ -32,14 +34,16 @@ class Karyawan:
     
     def setUpahPerHari (self, upahPerHari):
         self._upahPerHari = upahPerHari
-    
+
+#Print Info
     def printInfo (self):
         print('========= INFO =========')
         print('Nama             :', self._nama)
         print('Umur             :', self._umur)
         print('Jenis Kelamin    :', self._jenisKelamin)
         print('Upah per Hari    :', self._upahPerHari)
-    
+
+#Hitung Gaji Bulanan
     def hitungGajiBulanan (self, bulanan):
         if self._upahPerHari == None:
             print('ERROR! Upah per Hari belum di inputkan')
